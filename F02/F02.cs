@@ -180,50 +180,6 @@ namespace F02
             return chkDup;
         }
 
-        private void txeName_KeyDown(object sender, KeyEventArgs e)
-        {
-            //if (e.KeyCode == Keys.Enter)
-            //{
-            //    txeDescription.Focus();
-            //}
-        }
-
-        private void txeName_LostFocus(object sender, EventArgs e)
-        {
-            //txeName.Text = txeName.Text.ToUpper().Trim();
-            //bool chkDup = chkDuplicate();
-            //if (chkDup == false)
-            //{
-            //    txeName.Text = "";
-            //    txeName.Focus();
-            //}
-            //else
-            //{
-            //    txeDescription.Focus();
-            //}
-        }
-
-        private void txeDescription_KeyDown(object sender, KeyEventArgs e)
-        {
-        //    if (e.KeyCode == Keys.Enter)
-        //    {
-        //        txeDueDate.Focus();
-        //    }
-        }
-
-        private void txeDueDate_KeyDown(object sender, KeyEventArgs e)
-        {
-            //if (e.KeyCode == Keys.Enter)
-            //{
-            //    rgStatus.Focus();
-            //}
-        }
-
-        private void gvPTerm_RowStyle(object sender, RowStyleEventArgs e)
-        {
-            
-        }
-
         private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (glueCompany.Text.Trim() == "")
@@ -300,28 +256,6 @@ namespace F02
             string pathFile = new ObjSet.Folder(@"C:\MDS\Export\").GetPath() + "BranchList_" + DateTime.Now.ToString("yyyyMMdd") + ".xlsx";
             gvBranch.ExportToXlsx(pathFile);
             System.Diagnostics.Process.Start(pathFile);
-        }
-
-        private void gvPTerm_RowClick(object sender, RowClickEventArgs e)
-        {
-            //lblStatus.Text = "* Edit Payment Term";
-            //lblStatus.ForeColor = Color.Red;
-
-            //txeID.Text = gvPTerm.GetFocusedRowCellValue("No").ToString();
-            //txeName.Text = gvPTerm.GetFocusedRowCellValue("Name").ToString();
-            //txeDescription.Text = gvPTerm.GetFocusedRowCellValue("Description").ToString();
-            //txeDueDate.Text = gvPTerm.GetFocusedRowCellValue("DuedateCalculation").ToString();
-
-            //int status = -1;
-            //if (gvPTerm.GetFocusedRowCellValue("Status").ToString() != "")
-            //{
-            //    status = Convert.ToInt32(gvPTerm.GetFocusedRowCellValue("Status").ToString());
-            //}
-
-            //selectStatus(status);
-
-            //txeCREATE.Text = gvPTerm.GetFocusedRowCellValue("CreatedBy").ToString();
-            //txeDATE.Text = gvPTerm.GetFocusedRowCellValue("CreatedDate").ToString();
         }
 
         private void bbiPrintPreview_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
